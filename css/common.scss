@@ -1,0 +1,40 @@
+/* Сброс и нормализация */
+@import url("./Reset.css");
+@import url("./Normalize.css");
+
+/* Подключение шрифтов */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../Fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+/* Общие стили */
+body {
+  font-family: "Cera Pro", sans-serif;
+  color: #323264;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

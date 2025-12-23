@@ -1,0 +1,805 @@
+/* style.css */
+
+/* Хедер */
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__slash {
+  align-self: flex-start; 
+  margin-top: 0px; 
+}
+
+.header__top-info {
+    display: flex;
+    justify-content: flex-end; /* выравниваем по правому краю */
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px; /* отступ до меню */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #B3B3BA;
+}
+
+.header__top-item {
+    color: #B3B3BA;
+}
+
+.header__top-separator {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #E6E6F0;
+    border-radius: 50%;
+}
+
+.header__top-social img {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%); 
+}
+
+.header__current-menu {
+  font-weight: 200;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 2px;
+  color: #323264; 
+  margin-left: 2px; 
+  font-size: 36px;
+  margin-top: -15px;
+}
+
+/* --- Языковой переключатель --- */
+.header__langs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__lang-btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #B3B3BA;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 5px 7px;
+  transition: all 0.3s ease;
+}
+
+.header__lang-btn:hover {
+  background: #F0145A;
+  color: #fff;
+}
+
+.header__lang-btn--active {
+  background: #F0145A;
+  color: #fff;
+}
+
+
+.header__menu {
+  display: flex;
+  gap: 38px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__link {
+  position: relative;
+  color: #24A3FF; 
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.header__link--active {
+  color: #F0145A;
+}
+
+.header__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #F0145A;
+}
+
+.header__link:not(.header__link--active):hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #24A3FF;
+}
+
+
+/* --- Блок about --- */
+.about__intro {
+  display: flex;
+  justify-content: flex-start; /* колонки слева */
+  align-items: flex-start;
+  gap: 30px;                   /* расстояние между колонками */
+  width: 1440px;
+  padding-left: 120px;
+  padding-right: 100px;
+  margin: 0 auto;              /* центрируем контейнер */
+  padding-top: 120px;          /* отступ для хедера */
+  box-sizing: border-box;
+}
+
+/* Левая колонка */
+.about__intro-left {
+  flex: 1; /* занимает всё оставшееся место */
+  max-width: calc(100% - 388px - 30px); /* оставляем место для правой колонки и gap */
+}
+
+.about__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 24px;
+}
+
+.gradient-text {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* стандартное свойство */
+  color: transparent;     /* резерв на случай поддержки без вебкита */
+  display: inline-block;
+}
+
+.about__text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #323264;
+}
+
+/* Правая колонка */
+.about__intro-right {
+  width: 388px; /* фиксированная ширина */
+  display: flex;
+  flex-direction: inherit;
+  gap: 30px;
+  /* margin-left не нужен, т.к. место оставлено через max-width левой колонки */
+}
+
+/* Вертикальная линия слева */
+.about__line {
+  width: 4px;
+  background-color: #E6E6F0;
+  opacity: 1;
+  height: 322px;
+  flex-shrink: 0;
+}
+
+/* Статистика справа от линии */
+.about__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-left: 16px;
+}
+
+.about__stat {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.about__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.about__number {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.about__label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #323264;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 1024px) {
+  .about__intro {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 160px; /* для планшетов */
+  }
+
+  .about__intro-left {
+    max-width: 100%;
+  }
+
+  .about__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .about__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .about__intro-right {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about__line {
+    width: 100%;
+    height: 4px;
+    margin: 24px 0;
+  }
+
+  .about__stats {
+    padding-left: 0;
+  }
+
+  .about__number {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .about__label {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__intro {
+    padding-top: 140px; /* для мобильных */
+  }
+
+  .about__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .about__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .about__number {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about__label {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .about__intro {
+    padding: 40px 20px;
+  }
+}
+
+/* --- Блок команды --- */
+.about__team {
+  position: relative;
+  margin-top: 80px;
+}
+
+.about__team-img {
+  width: 100%;
+  height: auto;
+}
+
+.about__team-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(50, 50, 100, 0.3);
+}
+
+.about__team-title {
+  font-size: 72px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 60px;
+}
+
+/* Адаптив для блока команды */
+@media (max-width: 1024px) {
+  .about__stats { flex-direction: column; }
+  .about__team-title { font-size: 48px; }
+}
+
+@media (max-width: 768px) {
+  .header__menu { flex-direction: column; }
+  .about__title { font-size: 28px; }
+}
+
+@media (max-width: 375px) {
+  .about__team-title { font-size: 36px; }
+}
+
+/* Новый блок Quality */
+.quality__intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  width: 1440px;
+  padding-left: 130px;
+  padding-right: 0px;
+  margin: 0 auto;
+  padding-top: 80px;
+  box-sizing: border-box;
+}
+
+.quality__intro-left {
+  flex: 1; /* занимает оставшееся место */
+}
+
+.quality__text {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #323264;
+}
+
+.quality__intro-right {
+  width: 388px; /* фиксированная ширина */
+  display: flex;
+  align-items: flex-start;
+}
+
+.quality__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+/* Градиент для заголовка справа */
+.quality__title.gradient-text {
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .quality__intro {
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+  }
+
+  .quality__intro-left,
+  .quality__intro-right {
+    width: 100%;
+  }
+
+  .quality__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .quality__text {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quality__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .quality__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.footer {
+  background-color: #F5F5FA;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #323264;
+  padding: 40px 0;
+}
+
+/* Заголовок */
+.footer__title {
+  text-align: center;
+  font-weight: 400;
+  color: #323264;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+/* Картинки достижений */
+.footer__images {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+    padding-left: 60px;  
+  padding-right: 60px; 
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer__image {
+  width: 300px;            /* требуемая ширина */
+  height: 110px;           /* требуемая высота */
+  display: block;          /* чтобы margin/box-sizing работали предсказуемо */
+  object-fit: contain;     /* сохраняет пропорции картинки */
+  background: #ffffff;     /* если нужен белый фон */
+  border-radius: 12px;     /* требуемый радиус */
+  opacity: 1;              /* требуемая непрозрачность */
+  transform: rotate(0deg); /* угол 0 градусов */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* можно удалить, если не нужен */
+  box-sizing: border-box;  /* чтобы размеры считались корректно */
+}
+
+/* Адаптив — уменьшенные размеры на мобилках */
+@media (max-width: 768px) {
+  .footer__image {
+    width: 200px;
+    height: 80px;
+  }
+}
+
+/* Пагинация */
+.footer__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.footer__dot {
+  width: 12px;
+  height: 12px;
+  background-color: #E6E6F0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer__dot--active {
+  background-color: #24A3FF;
+}
+
+.footer__dot:hover {
+  background-color: #9eccf0;
+}
+
+/* Нижняя часть футера */
+.footer__bottom {
+  border-top: 1px solid #E6E6F0;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start;
+  padding-left: 60px;  
+  padding-right: 60px; 
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Левая часть */
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Контейнер с адресом и картой */
+.footer__address-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer__address {
+  color: #323264;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer__map {
+  color: #24A3FF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer__map:hover {
+  color: #F0145A;
+  transition: color 0.3s ease;
+}
+
+/* Контакты */
+.footer__contacts {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer__social img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.footer__social img:hover {
+  color: #F0145A;
+  transition: color 0.3s ease;
+}
+
+.footer__phone {
+  font-weight: 700;
+}
+
+.footer__email {
+  color: #24A3FF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer__email:hover {
+  color: #F0145A;
+  transition: color 0.3s ease;
+}
+
+/* Правая часть */
+.footer__copyright {
+  color: #B3B3B3;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  text-align: right;
+}
+
+/* --------------------------- */
+/* 📱 Адаптивность (до 768px) */
+/* --------------------------- */
+@media (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__left {
+    align-items: center;
+  }
+
+  .footer__copyright {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Бургер-меню */
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__burger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #323264;
+  border-radius: 1px;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .header__menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__menu.active {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about__intro,
+  .quality__intro {
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .about__intro-left,
+  .quality__intro-left,
+  .about__intro-right,
+  .quality__intro-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__title,
+  .quality__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .about__text,
+  .quality__text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about__team-title {
+    font-size: 48px;
+    letter-spacing: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .about__team-title {
+    font-size: 36px;
+    letter-spacing: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer__left {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .footer__address-block {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer__contacts {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .footer__copyright {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .footer__images {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 15px;
+  }
+
+  .footer__image {
+    width: 180px;
+    height: 70px;
+  }
+}
+
+.about__intro,
+.quality__intro {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 20px 0 20px; /* заменили левый/правый паддинг на 20px */
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .about__intro,
+  .quality__intro {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__intro,
+  .quality__intro {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+
