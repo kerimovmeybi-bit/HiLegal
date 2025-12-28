@@ -1,4 +1,3 @@
-
 body {
   min-height: 100vh;
   display: flex;
@@ -42,39 +41,41 @@ main {
 }
 
 .header__slash {
-  align-self: flex-start; 
-  margin-top: 0px; 
+  align-self: flex-start;
+  margin-top: 0px;
 }
 
 .header__top-info {
-    display: flex;
-    justify-content: flex-end; /* выравниваем по правому краю */
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px; /* отступ до меню */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #B3B3BA;
+  display: flex;
+  justify-content: flex-end;
+  /* выравниваем по правому краю */
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  /* отступ до меню */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #B3B3BA;
 }
 
 .header__top-item {
-    color: #B3B3BA;
+  color: #B3B3BA;
 }
 
 .header__top-separator {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: #E6E6F0;
-    border-radius: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #E6E6F0;
+  border-radius: 50%;
 }
 
 .header__top-social img {
-    width: 24px;
-    height: 24px;
-    filter: grayscale(100%); 
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
 }
 
 .header__current-menu {
@@ -82,8 +83,8 @@ main {
   font-style: normal;
   line-height: 100%;
   letter-spacing: 2px;
-  color: #323264; 
-  margin-left: 2px; 
+  color: #323264;
+  margin-left: 2px;
   font-size: 36px;
   margin-top: -15px;
 }
@@ -130,7 +131,7 @@ main {
 
 .header__link {
   position: relative;
-  color: #24A3FF; 
+  color: #24A3FF;
   text-decoration: none;
   font-weight: 500;
   padding-bottom: 4px;
@@ -160,6 +161,7 @@ main {
   height: 2px;
   background-color: #24A3FF;
 }
+
 /* -- FINISH HEADER -- */
 
 .team {
@@ -183,14 +185,17 @@ main {
 }
 
 .team__container {
-  max-width: 1440px; /* ширина контента из макета */
+  max-width: 1440px;
+  /* ширина контента из макета */
   margin: 0 auto;
-  padding: 0 60px; /* боковые отступы */
+  padding: 0 60px;
+  /* боковые отступы */
 }
 
 .team__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 фото в ряд на больших экранах */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 фото в ряд на больших экранах */
   gap: 0px;
   justify-items: center;
 }
@@ -261,23 +266,26 @@ main {
 .team__arrow {
   width: 32px;
   height: 32px;
-  background-color: #f5f5fa;  /* цвет кружка */
-  border-radius: 50%;          /* делает кружок */
+  background-color: #f5f5fa;
+  /* цвет кружка */
+  border-radius: 50%;
+  /* делает кружок */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   position: relative;
   transition: transform 0.3s ease;
-  border: none;                /* убираем черную обводку */
+  border: none;
+  /* убираем черную обводку */
 }
 
 /* Стрелка вправо */
 .team__arrow::after {
   content: "";
   display: block;
-  width: 8px;       
-  height: 8px;      
+  width: 8px;
+  height: 8px;
   border-right: 2px solid #24a3ff;
   border-top: 2px solid #24a3ff;
   transform: rotate(45deg);
@@ -336,10 +344,11 @@ main {
   border-top: 1px solid #E6E6F0;
   padding-top: 20px;
   display: flex;
-  justify-content: space-between; /* <-- Разделяет на лево/право */
+  justify-content: space-between;
+  /* <-- Разделяет на лево/право */
   align-items: flex-start;
-  padding-left: 60px;  
-  padding-right: 60px; 
+  padding-left: 60px;
+  padding-right: 60px;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -370,7 +379,12 @@ main {
 .footer__map {
   color: #24A3FF;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .footer__map:hover {
@@ -381,7 +395,7 @@ main {
 /* Контакты */
 .footer__contacts {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 15px;
   flex-wrap: wrap;
 }
@@ -399,7 +413,14 @@ main {
 
 .footer__phone {
   font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #46466E;
 }
+
 
 .footer__email {
   color: #24A3FF;
@@ -415,9 +436,10 @@ main {
 /* Правая часть */
 .footer__copyright {
   color: #B3B3B3;
-  font-size: 16px;
   font-weight: 400;
-  margin: 0;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
   text-align: right;
 }
 
@@ -444,21 +466,26 @@ main {
 /* Mobile */
 @media (max-width: 430px) {
   .team__container {
-    padding: 0 15px; /* уменьшаем боковые отступы */
+    padding: 0 15px;
+    /* уменьшаем боковые отступы */
   }
 
   .team__grid {
-    gap: 12px; /* уменьшаем расстояние между карточками */
+    gap: 12px;
+    /* уменьшаем расстояние между карточками */
   }
 
   .team__title {
     font-size: 20px;
-    margin: 0 0 40px 0; /* уменьшаем отступы вокруг заголовка */
+    margin: 0 0 40px 0;
+    /* уменьшаем отступы вокруг заголовка */
   }
 
   .team__info {
-    padding: 12px 4px 20px 4px; /* уменьшаем паддинги внутри карточки */
-    flex-direction: column;     /* имя и должность сверху, стрелка снизу */
+    padding: 12px 4px 20px 4px;
+    /* уменьшаем паддинги внутри карточки */
+    flex-direction: column;
+    /* имя и должность сверху, стрелка снизу */
     align-items: flex-start;
   }
 
@@ -470,7 +497,8 @@ main {
 /* Бургер-меню для мобильных */
 @media (max-width: 768px) {
   .header__menu {
-    display: none; /* скрываем обычное меню */
+    display: none;
+    /* скрываем обычное меню */
     flex-direction: column;
     gap: 20px;
     background: #fff;
@@ -506,47 +534,68 @@ main {
     transition: 0.3s;
   }
 
-  .burger-btn span:nth-child(1) { top: 0; }
-  .burger-btn span:nth-child(2) { top: 50%; transform: translateY(-50%); }
-  .burger-btn span:nth-child(3) { bottom: 0; }
+  .burger-btn span:nth-child(1) {
+    top: 0;
+  }
+
+  .burger-btn span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .burger-btn span:nth-child(3) {
+    bottom: 0;
+  }
 }
 
 @media (max-width: 768px) {
   .team__info {
-    flex-direction: row; /* горизонтальный флекс */
-    justify-content: space-between; /* имя/должность слева, стрелка справа */
-    align-items: center; /* выравнивание по центру вертикально */
+    flex-direction: row;
+    /* горизонтальный флекс */
+    justify-content: space-between;
+    /* имя/должность слева, стрелка справа */
+    align-items: center;
+    /* выравнивание по центру вертикально */
     width: 100%;
-    padding: 15px 5px 36px 5px; /* сохрани текущие паддинги */
+    padding: 15px 5px 36px 5px;
+    /* сохрани текущие паддинги */
   }
 
   .team__text {
-    flex: 1; /* текст занимает доступное место слева */
+    flex: 1;
+    /* текст занимает доступное место слева */
   }
 
   .team__arrow {
-    margin-top: 0; /* убираем верхний отступ */
+    margin-top: 0;
+    /* убираем верхний отступ */
   }
 }
 
 /* --- Футер для мобильных --- */
 @media (max-width: 768px) {
   .footer__bottom {
-    flex-direction: column; /* вертикальный порядок */
-    align-items: center;    /* центрируем по горизонтали */
+    flex-direction: column;
+    /* вертикальный порядок */
+    align-items: center;
+    /* центрируем по горизонтали */
     text-align: center;
-    gap: 15px;              /* расстояние между элементами */
-    padding: 30px 20px;     /* уменьшаем паддинги */
+    gap: 15px;
+    /* расстояние между элементами */
+    padding: 30px 20px;
+    /* уменьшаем паддинги */
   }
 
   .footer__address-block {
-    flex-direction: column; /* адрес и ссылка вертикально */
+    flex-direction: column;
+    /* адрес и ссылка вертикально */
     align-items: center;
     gap: 5px;
   }
 
   .footer__contacts {
-    flex-direction: column; /* лого и контакты вертикально */
+    flex-direction: column;
+    /* лого и контакты вертикально */
     align-items: center;
     gap: 10px;
   }
@@ -566,4 +615,3 @@ main {
     text-align: center;
   }
 }
-
