@@ -32,39 +32,41 @@
 }
 
 .header__slash {
-  align-self: flex-start; 
-  margin-top: 0px; 
+  align-self: flex-start;
+  margin-top: 0px;
 }
 
 .header__top-info {
-    display: flex;
-    justify-content: flex-end; /* выравниваем по правому краю */
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 8px; /* отступ до меню */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #B3B3BA;
+  display: flex;
+  justify-content: flex-end;
+  /* выравниваем по правому краю */
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  /* отступ до меню */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #B3B3BA;
 }
 
 .header__top-item {
-    color: #B3B3BA;
+  color: #B3B3BA;
 }
 
 .header__top-separator {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: #E6E6F0;
-    border-radius: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #E6E6F0;
+  border-radius: 50%;
 }
 
 .header__top-social img {
-    width: 24px;
-    height: 24px;
-    filter: grayscale(100%); 
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%);
 }
 
 .header__current-menu {
@@ -72,8 +74,8 @@
   font-style: normal;
   line-height: 100%;
   letter-spacing: 2px;
-  color: #323264; 
-  margin-left: 2px; 
+  color: #323264;
+  margin-left: 2px;
   font-size: 36px;
   margin-top: -15px;
 }
@@ -120,7 +122,7 @@
 
 .header__link {
   position: relative;
-  color: #24A3FF; 
+  color: #24A3FF;
   text-decoration: none;
   font-weight: 500;
   padding-bottom: 4px;
@@ -155,21 +157,27 @@
 /* --- Блок about --- */
 .about__intro {
   display: flex;
-  justify-content: flex-start; /* колонки слева */
+  justify-content: flex-start;
+  /* колонки слева */
   align-items: flex-start;
-  gap: 30px;                   /* расстояние между колонками */
+  gap: 30px;
+  /* расстояние между колонками */
   width: 1440px;
   padding-left: 120px;
   padding-right: 100px;
-  margin: 0 auto;              /* центрируем контейнер */
-  padding-top: 120px;          /* отступ для хедера */
+  margin: 0 auto;
+  /* центрируем контейнер */
+  padding-top: 120px;
+  /* отступ для хедера */
   box-sizing: border-box;
 }
 
 /* Левая колонка */
 .about__intro-left {
-  flex: 1; /* занимает всё оставшееся место */
-  max-width: calc(100% - 388px - 30px); /* оставляем место для правой колонки и gap */
+  flex: 1;
+  /* занимает всё оставшееся место */
+  max-width: calc(100% - 388px - 30px);
+  /* оставляем место для правой колонки и gap */
 }
 
 .about__title {
@@ -184,8 +192,10 @@
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* стандартное свойство */
-  color: transparent;     /* резерв на случай поддержки без вебкита */
+  background-clip: text;
+  /* стандартное свойство */
+  color: transparent;
+  /* резерв на случай поддержки без вебкита */
   display: inline-block;
 }
 
@@ -200,7 +210,8 @@
 
 /* Правая колонка */
 .about__intro-right {
-  width: 388px; /* фиксированная ширина */
+  width: 388px;
+  /* фиксированная ширина */
   display: flex;
   flex-direction: inherit;
   gap: 30px;
@@ -256,7 +267,8 @@
   .about__intro {
     flex-direction: column;
     gap: 40px;
-    padding-top: 160px; /* для планшетов */
+    padding-top: 160px;
+    /* для планшетов */
   }
 
   .about__intro-left {
@@ -301,7 +313,8 @@
 
 @media (max-width: 480px) {
   .about__intro {
-    padding-top: 140px; /* для мобильных */
+    padding-top: 140px;
+    /* для мобильных */
   }
 
   .about__title {
@@ -358,17 +371,29 @@
 
 /* Адаптив для блока команды */
 @media (max-width: 1024px) {
-  .about__stats { flex-direction: column; }
-  .about__team-title { font-size: 48px; }
+  .about__stats {
+    flex-direction: column;
+  }
+
+  .about__team-title {
+    font-size: 48px;
+  }
 }
 
 @media (max-width: 768px) {
-  .header__menu { flex-direction: column; }
-  .about__title { font-size: 28px; }
+  .header__menu {
+    flex-direction: column;
+  }
+
+  .about__title {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 375px) {
-  .about__team-title { font-size: 36px; }
+  .about__team-title {
+    font-size: 36px;
+  }
 }
 
 /* Новый блок Quality */
@@ -386,7 +411,8 @@
 }
 
 .quality__intro-left {
-  flex: 1; /* занимает оставшееся место */
+  flex: 1;
+  /* занимает оставшееся место */
 }
 
 .quality__text {
@@ -398,7 +424,8 @@
 }
 
 .quality__intro-right {
-  width: 388px; /* фиксированная ширина */
+  width: 388px;
+  /* фиксированная ширина */
   display: flex;
   align-items: flex-start;
 }
@@ -483,23 +510,33 @@
   display: flex;
   justify-content: space-between;
   gap: 30px;
-    padding-left: 60px;  
-  padding-right: 60px; 
+  padding-left: 60px;
+  padding-right: 60px;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .footer__image {
-  width: 300px;            /* требуемая ширина */
-  height: 110px;           /* требуемая высота */
-  display: block;          /* чтобы margin/box-sizing работали предсказуемо */
-  object-fit: contain;     /* сохраняет пропорции картинки */
-  background: #ffffff;     /* если нужен белый фон */
-  border-radius: 12px;     /* требуемый радиус */
-  opacity: 1;              /* требуемая непрозрачность */
-  transform: rotate(0deg); /* угол 0 градусов */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05); /* можно удалить, если не нужен */
-  box-sizing: border-box;  /* чтобы размеры считались корректно */
+  width: 300px;
+  /* требуемая ширина */
+  height: 110px;
+  /* требуемая высота */
+  display: block;
+  /* чтобы margin/box-sizing работали предсказуемо */
+  object-fit: contain;
+  /* сохраняет пропорции картинки */
+  background: #ffffff;
+  /* если нужен белый фон */
+  border-radius: 12px;
+  /* требуемый радиус */
+  opacity: 1;
+  /* требуемая непрозрачность */
+  transform: rotate(0deg);
+  /* угол 0 градусов */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  /* можно удалить, если не нужен */
+  box-sizing: border-box;
+  /* чтобы размеры считались корректно */
 }
 
 /* Адаптив — уменьшенные размеры на мобилках */
@@ -540,10 +577,10 @@
   border-top: 1px solid #E6E6F0;
   padding-top: 20px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: flex-start;
-  padding-left: 60px;  
-  padding-right: 60px; 
+  padding-left: 60px;
+  padding-right: 60px;
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -677,7 +714,7 @@
     top: 70px;
     right: 0;
     padding: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
   .header__burger {
@@ -690,6 +727,7 @@
 }
 
 @media (max-width: 1024px) {
+
   .about__intro,
   .quality__intro {
     flex-direction: column;
@@ -697,7 +735,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  
+
   .about__intro-left,
   .quality__intro-left,
   .about__intro-right,
@@ -707,6 +745,7 @@
 }
 
 @media (max-width: 480px) {
+
   .about__title,
   .quality__title {
     font-size: 24px;
@@ -781,11 +820,13 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 120px 20px 0 20px; /* заменили левый/правый паддинг на 20px */
+  padding: 120px 20px 0 20px;
+  /* заменили левый/правый паддинг на 20px */
   box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
+
   .about__intro,
   .quality__intro {
     padding-left: 20px;
@@ -794,12 +835,10 @@
 }
 
 @media (max-width: 480px) {
+
   .about__intro,
   .quality__intro {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
-
-
-
