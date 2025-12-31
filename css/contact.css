@@ -53,6 +53,15 @@
 
 .header__top-item {
     color: #B3B3BA;
+    text-decoration: none;
+}
+
+.header__top-item b {
+    cursor: pointer;
+}
+
+.header__top-item:hover {
+    color: #F0145A;
 }
 
 .header__top-separator {
@@ -210,6 +219,12 @@
     font-size: 21px;
     line-height: 30px;
     color: #323264;
+    cursor: pointer;
+}
+
+.contact__text:hover {
+    color: #F0145A;
+    transition: color 0.3s ease;
 }
 
 .h-line {
@@ -314,7 +329,7 @@ a:hover .icon-facebook {
 
 .feedback__button {
     display: inline-block;
-    width: 450px;
+    width: 100%;
     opacity: 1;
     padding-top: 18px;
     padding-right: 30px;
@@ -494,6 +509,11 @@ a:hover .icon-facebook {
     letter-spacing: 0%;
     text-align: right;
     color: #46466E;
+    cursor: pointer;
+}
+
+.footer__phone:hover {
+    color: #F0145A;
 }
 
 .footer__email {
