@@ -123,6 +123,29 @@
         </div>
 
     </footer>
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lastScroll = 0;
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            const current = window.scrollY;
+            if (current > lastScroll && current > 100) {
+                header.classList.add('header--hidden');
+            } else {
+                header.classList.remove('header--hidden');
+            }
+            lastScroll = current;
+        });
+
+        // Burger menu
+
+        const burger = document.querySelector('.header__burger');
+        const menu = document.querySelector('.header__menu');
+
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
