@@ -4,7 +4,7 @@
 
 
 .header {
-    position: relative;
+    position: fixed;
     top: 0;
     width: 100%;
     background: #fff;
@@ -185,6 +185,10 @@
 }
 
 /*Блок-Контакты */
+.main {
+    padding-top: 80px;
+}
+
 .contact {
     width: 1920px;
     height: 603px;
