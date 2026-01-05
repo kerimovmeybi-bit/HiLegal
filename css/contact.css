@@ -601,6 +601,7 @@ a:hover .icon-facebook {
     .header__burger {
         align-items: center;
         margin-top: 6px;
+        display: block;
     }
 
     /* меню */
