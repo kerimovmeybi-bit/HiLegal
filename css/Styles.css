@@ -731,27 +731,104 @@
 }
 
 /* Адаптив */
+/* ===== BASE ===== */
+.header {
+  background: #fff;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ===== BURGER ===== */
+.header__burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header__burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #24A3FF;
+  margin: 3px 0;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .header__menu {
+
+  .header__container {
+    align-items: flex-start;
+  }
+
+  /* верхняя строка */
+  .header__top-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* скрываем лишнее */
+  .header__top-item,
+  .header__top-social,
+  .header__top-separator {
     display: none;
-    flex-direction: column;
-    gap: 15px;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    padding: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
+  /* показываем бургер */
   .header__burger {
-    display: flex;
+    display: block;
   }
 
-  .header__menu.active {
+
+  /* навигация */
+  .header__nav {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    padding: 80px 20px;
+    transform: translateX(100%);
+    transition: 0.3s;
+  }
+
+  .header__nav.active {
+    transform: translateX(0);
+  }
+
+  .header__menu {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header__link {
+    font-size: 22px;
+  }
+
+  /* текст about us рядом с логотипом */
+  .header__current-menu {
+    font-size: 18px;
   }
 }
+
 
 @media (max-width: 1024px) {
 
@@ -822,6 +899,7 @@
   .footer__contacts {
     flex-direction: column;
     gap: 5px;
+    align-items: center;
   }
 
   .footer__copyright {

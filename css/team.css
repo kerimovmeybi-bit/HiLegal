@@ -346,6 +346,12 @@ main {
   }
 }
 
+@media (max-width: 480px) {
+  .team__title {
+    font-size: 20px;
+    margin: 0 0 40px 0;
+  }
+}
 
 /* FOOTER */
 /* Нижняя часть футера */
@@ -460,24 +466,85 @@ main {
 /* --------------------------- */
 /* 📱 Адаптивность (до 768px) */
 /* --------------------------- */
+/* ===== BURGER ===== */
+.burger-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.burger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #000;
+  margin: 1.5px 0;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .footer__bottom {
+
+  /* верхняя строка */
+  .header__top-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* скрываем адрес и FB */
+  .header__top-item,
+  .header__top-social,
+  .header__top-separator {
+    display: none;
+  }
+
+  /* бургер */
+  .burger-btn {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: end;
+    margin-top: 6px;
   }
 
-  .footer__left {
-    align-items: center;
+  .burger-btn span {
+    width: 22px;
+    height: 2px;
+    background: #24A3FF;
+    margin: 1.5px 0;
   }
 
-  .footer__copyright {
-    text-align: center;
-    margin-top: 10px;
+  /* меню */
+  .header__nav {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    padding: 80px 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+
+  .header__nav.active {
+    transform: translateX(0);
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header__link {
+    font-size: 22px;
+  }
+
+  .header__current-menu {
+    font-size: 18px;
   }
 }
 
-/* Mobile */
+/* Адаптив BODY*/
 @media (max-width: 430px) {
   .team__container {
     padding: 0 15px;
@@ -508,59 +575,7 @@ main {
   }
 }
 
-/* Бургер-меню для мобильных */
-@media (max-width: 768px) {
-  .header__menu {
-    display: none;
-    /* скрываем обычное меню */
-    flex-direction: column;
-    gap: 20px;
-    background: #fff;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 200px;
-    padding: 20px;
-    border: 1px solid #E6E6F0;
-    border-radius: 8px;
-    z-index: 1001;
-  }
 
-  .header__menu.active {
-    display: flex;
-  }
-
-  .burger-btn {
-    display: block;
-    cursor: pointer;
-    width: 30px;
-    height: 22px;
-    position: relative;
-  }
-
-  .burger-btn span {
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #24A3FF;
-    border-radius: 3px;
-    left: 0;
-    transition: 0.3s;
-  }
-
-  .burger-btn span:nth-child(1) {
-    top: 0;
-  }
-
-  .burger-btn span:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .burger-btn span:nth-child(3) {
-    bottom: 0;
-  }
-}
 
 @media (max-width: 768px) {
   .team__info {
@@ -586,7 +601,24 @@ main {
   }
 }
 
-/* --- Футер для мобильных --- */
+/* Адаптив FOOTER */
+@media (max-width: 768px) {
+  .footer__bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__left {
+    align-items: center;
+  }
+
+  .footer__copyright {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer__bottom {
     flex-direction: column;
