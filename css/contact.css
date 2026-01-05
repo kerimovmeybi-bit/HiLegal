@@ -225,6 +225,7 @@
     line-height: 30px;
     color: #323264;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .contact__text:hover {
@@ -515,6 +516,7 @@ a:hover .icon-facebook {
     text-align: right;
     color: #46466E;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .footer__phone:hover {
@@ -601,6 +603,7 @@ a:hover .icon-facebook {
     .header__burger {
         align-items: center;
         margin-top: 6px;
+        display: block;
     }
 
     /* меню */

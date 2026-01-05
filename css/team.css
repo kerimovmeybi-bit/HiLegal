@@ -435,6 +435,7 @@ main {
   text-align: right;
   color: #46466E;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .footer__phone:hover {
