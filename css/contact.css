@@ -214,8 +214,7 @@
 }
 
 .contact__menu {
-    width: 650px;
-    height: 301px;
+    width: 100%;
     opacity: 1;
 }
 
@@ -250,11 +249,32 @@
     color: #24A3FF;
 }
 
+.facebook {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
 .icon-facebook {
     transition: 0.1s ease;
 }
 
-a:hover .icon-facebook {
+.icon-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    align-items: center;
+    margin: 0;
+}
+
+.facebook:hover {
+    color: #F0145A;
+}
+
+.icon-facebook:hover {
     filter: brightness(0) saturate(100%) invert(27%) sepia(96%) saturate(7492%) hue-rotate(327deg) brightness(97%) contrast(102%);
 }
 
@@ -350,6 +370,7 @@ a:hover .icon-facebook {
     text-align: center;
     color: #FFFFFF;
     margin-top: 15px;
+    border: none;
 }
 
 .feedback__button:hover {
@@ -386,29 +407,39 @@ a:hover .icon-facebook {
     padding-right: 60px;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .footer__image {
     width: 300px;
-    /* требуемая ширина */
     height: 110px;
-    /* требуемая высота */
     display: block;
-    /* чтобы margin/box-sizing работали предсказуемо */
     object-fit: contain;
-    /* сохраняет пропорции картинки */
     background: #ffffff;
-    /* если нужен белый фон */
     border-radius: 12px;
-    /* требуемый радиус */
-    opacity: 1;
-    /* требуемая непрозрачность */
-    transform: rotate(0deg);
-    /* угол 0 градусов */
+    opacity: 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    /* можно удалить, если не нужен */
     box-sizing: border-box;
-    /* чтобы размеры считались корректно */
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* когда показываем */
+.footer__image.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* уезжают влево */
+.footer__image.slide-out {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+/* заезжают справа */
+.footer__image.slide-in {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 /* Пагинация */
@@ -476,7 +507,6 @@ a:hover .icon-facebook {
     color: #24A3FF;
     text-decoration: none;
     font-weight: 700;
-    font-style: Bold;
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 1px;
@@ -509,10 +539,8 @@ a:hover .icon-facebook {
 
 .footer__phone {
     font-weight: 700;
-    font-style: Bold;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
     text-align: right;
     color: #46466E;
     cursor: pointer;
@@ -538,7 +566,6 @@ a:hover .icon-facebook {
 .footer__copyright {
     color: #B3B3B3;
     font-weight: 400;
-    font-style: Regular;
     font-size: 16px;
     line-height: 100%;
     text-align: right;
