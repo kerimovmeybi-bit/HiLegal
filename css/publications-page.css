@@ -4,18 +4,18 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
 }
 
 main {
     width: 100%;
-    padding: 100px 16px 40px;
+    padding: 100px 0px 0px;
 }
 
 /*Хедер*/
@@ -198,91 +198,180 @@ main {
     border-radius: 1px;
 }
 
-/*Блок информации команды*/
-.team-info {
+/* ===== END ХЕДЕР ===== */
+
+/* ===== МAIN ===== */
+.publications-page {
     display: flex;
+    gap: 30px;
+    opacity: 1;
+    padding-top: 30px;
+    padding-right: 60px;
+    padding-bottom: 32px;
+    padding-left: 60px;
+    background-color: #F5F5FA;
     justify-content: center;
-    gap: 60px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.team-info__img {
-    width: 400px;
-    height: 500px;
+.publications-btn {
+    width: 233px;
+    height: 42px;
+    gap: 2px;
+    display: flex;
     opacity: 1;
     border-radius: 12px;
-    object-fit: cover;
+    padding: 2px;
+    background-color: #E6E6F0;
+    justify-content: space-around;
+    margin: auto;
 }
 
-.team-info__text-block {
-    display: flex;
-    flex-direction: column;
-    margin-left: 60px;
-    max-width: 560px;
-    gap: 15px;
-}
-
-.team-info__details {
-    display: flex;
-    width: 620px;
-    flex-direction: column;
-}
-
-.team-info__name {
+.publications-btn--news {
+    padding-top: 9.5px;
+    padding-right: 30px;
+    padding-bottom: 9.5px;
+    padding-left: 30px;
+    border-radius: 10px;
+    border: none;
     font-weight: 700;
-    font-size: 38px;
-    line-height: 100%;
-    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.team-info__role {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    color: #B3B3BA;
-    margin: 0px;
-}
-
-.team-info__contact {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-}
-
-.info {
-    font-weight: 400;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
-    color: #24A3FF;
+    text-align: center;
+    color: #323264;
     text-decoration: none;
 }
 
-.h-line {
-    width: 100%;
-    height: 4px;
-    background: #E6E6F0;
-    margin: 30px 0;
+.publications-btn--news:active {
+    background-color: #FFFFFF;
 }
 
-.team-info__bio {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 26px;
-    color: #000000;
+.publications-btn--news:hover {
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.team-title {
+.publications-btn--articles {
+    padding-top: 9.5px;
+    padding-right: 30px;
+    padding-bottom: 9.5px;
+    padding-left: 30px;
+    border-radius: 10px;
+    border: none;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #323264;
+    text-decoration: none;
+}
+
+.publications-btn--articles:active {
+    background-color: #FFFFFF;
+}
+
+.publications-btn--articles:hover {
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.publications-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.publication-item {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    transition: fill 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.publication-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.publication-item__image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+}
+
+.publication-item__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #24A3FF;
+    margin: 30px 30px 15px 30px;
+    text-decoration: none;
+}
+
+.publication-item__title:hover {
+    color: #F0145A;
+    transition: color 0.3s ease;
+}
+
+.publication-item__date {
+    font-weight: 700;
+    font-size: 12px;
     line-height: 100%;
     text-transform: uppercase;
-    color: #323264;
-    margin-top: 14px;
+    color: #B3B3BA;
+    margin: 0px 30px 15px 30px;
 }
 
-/*Футер*/
+.h-line {
+    width: calc(100% - 60px);
+    height: 4px;
+    background-color: #E6E6F0;
+    margin: 0px 30px 15px 30px;
+}
+
+.publication-item__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    margin: 0px 30px 30px 30px;
+}
+
+.publication-btn {
+    opacity: 1;
+    padding-top: 18px;
+    padding-right: 35px;
+    padding-bottom: 18px;
+    padding-left: 35px;
+    border-radius: 12px;
+    text-align: center;
+    background-color: #24A3FF;
+    margin: auto;
+    box-shadow: 0px 0px 20px 0px #24A3FF80;
+    transition: fill 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.publication-btn:hover {
+    transform: translateY(-5px);
+}
+
+.publication-btn--more {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* ===== ФУТЕР ===== */
 .footer {
     background-color: #F5F5FA;
     font-weight: 400;
@@ -476,6 +565,8 @@ main {
 }
 
 
+
+
 /* Адаптив */
 
 
@@ -569,53 +660,59 @@ main {
     }
 }
 
+/* ===== END АДАПТИВ ХЕДЕРА ===== */
+
+
 /* ===== АДАПТИВ MAIN ===== */
-@media (min-width: 768px) {
-    main {
-        padding: 120px 40px 60px;
-    }
-}
+/* ===== MOBILE (по умолчанию) ===== */
+@media (max-width: 767px) {
 
-@media (max-width: 768px) {
-    .team-info {
-        flex-direction: column;
-        gap: 24px;
-        padding: 0 16px;
+    .publications-page {
+        padding: 20px 15px;
+        gap: 20px;
     }
 
-    .team-info__img {
-        width: 100%;
-        height: 320px;
+    .publications-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .team-info__details {
-        width: 100%;
+    .publication-item__image {
+        height: 180px;
     }
 
-    .team-info__name {
-        font-size: 26px;
-        line-height: 110%;
+    .publication-item__title {
+        font-size: 14px;
+        margin: 20px 20px 10px;
     }
 
-    .team-info__contact {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-
-    .header__top-separator {
-        display: none;
+    .publication-item__date {
+        margin: 0 20px 10px;
     }
 
     .h-line {
-        margin: 20px 0;
+        width: calc(100% - 40px);
+        margin: 0 20px 10px;
     }
 
-    .team-info__bio {
-        font-size: 15px;
-        line-height: 24px;
+    .publication-item__description {
+        margin: 0 20px 20px;
+        font-size: 13px;
+    }
+
+    .publications-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .publication-btn {
+        width: 100%;
+        max-width: 260px;
     }
 }
+
+/* ===== END АДАПТИВ MAIN ===== */
+
 
 
 /* ===== АДАПТИВ ФУТЕРА ===== */
@@ -680,4 +777,4 @@ main {
     }
 }
 
-/* ===== АДАПТИВ BODY ===== */
+/* ===== END АДАПТИВ ФУТЕРА ===== */
