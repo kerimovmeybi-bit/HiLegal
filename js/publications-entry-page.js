@@ -60,7 +60,7 @@ const publications = {
                         the consent of users, because, firstly, when creating Google accounts, the user agrees to the
                         Privacy Policy, and secondly, Google has a section "Ads personalization", where you can disable
                         this feature.`,
-    img2: `/Images/Illustration.png`,
+    img2: `/Images/illustrations.webp`,
     text4: `This is what the ad personalization settings window in
                         your Google Account looks like.`,
     text5: `However, CNIL does not think so, because the information about the
@@ -98,7 +98,7 @@ const publications = {
     ],
     text3: `millennialism, the belief, expressed in the book of Revelation to John, the last book of the New Testament, 
             that Christ will establish a 1,000-year reign of the saints on earth (the millennium) before the Last Judgment.`,
-    img2: `./Images/Millenial.png`,
+    img2: `./Images/Millenial.webp`,
     text4: `The 'Millennial Bible' has become popular among young Filipino Catholics a year after its launch. (Photo by Marielle Lucenio)`,
     text5: `In a country where multiple languages are prevalent, the incomprehensibility of the traditional Filipino-translated Bible has been a valid excuse not to impinge on the sacred text.
             This was a challenge that the Philippine Bible Society tried to address a year ago when it launched a new Bible translation of the New Testament known as the "Pinoy Version."
@@ -131,7 +131,7 @@ const publications = {
             which often involve recurring expenses, digital marketing strategies like SEO can help a website generate leads continuously. 
             In general, a law firm website serves as a vital platform to attract clients, improve communication, and build a strong online brand while controlling marketing costs. 
             Well-executed law firm website content writing includes clear calls to action, making it easy for potential clients to reach out and book consultations.`,
-    img2: `./Images/Language-Law.png`,
+    img2: `./Images/Language-Law.webp`,
     text4: `Why Should a Law Firm Have a Website?`,
     text5: `Creating effective law firm website content requires more than a professional design—it demands well-crafted content that speaks to your audience, 
             builds trust, and enhances your online visibility. Whether your goal is to attract new clients, showcase your expertise, or establish credibility, 
@@ -160,7 +160,7 @@ const publications = {
       "Inadmissible: Typically excludes transport, meal plans, development fees, or voluntary donations."
     ],
     text3: ``,
-    img2: `./Images/child-care.png`,
+    img2: `./Images/child-care.webp`,
     text4: ``,
     text5: ``,
     titleList2: `Your spouse was a full-time student (or disabled) from September 1, 2025 – November 15, 2026. 
@@ -172,7 +172,7 @@ const publications = {
   },
 
 6:{
-    img: `./Images/dollar.png`,
+    img: `./Images/dollar.webp`,
     title: `Currency control is dead, long live currency control!`,
     time: `June 14, 2018`,
     text1: `The phrase "Currency control is dead, long live currency control!" captures the current dynamic where 
@@ -192,7 +192,7 @@ const publications = {
             strict controls (capital controls, limits on foreign exchange) during crises for stability (preventing capital flight) and liberalizing 
             them for growth, often seeing them relaxed, then reintroduced or tightened as economic needs change, with Ukraine's wartime situation being a 
             prime example of evolving restrictions.`,
-    img2: "./Images/image-dollar.png",
+    img2: "./Images/image-dollar.webp",
     text4: `The dollar is dead, long live the dollar`,
     text5: ``,
     titleList2: `Why the Phrase Resonates`,

@@ -2,7 +2,7 @@ const teamData = {
   1: {
     name: 'Alexander Alexandrovsky',
     position: 'Managing Partner',
-    img: './Images/Photo2.jpg',
+    img: './Images/Photo2.webp',
     email:'alexandrovsky@forstudy.space',
     text1: `
       <p>Alexander specializes in maritime and commercial law, representing the interests of
@@ -24,7 +24,7 @@ const teamData = {
   2: {
     name: 'Evgeny Patrikov',
     position: 'Equity partner, Attorney-at-law',
-    img: './Images/Photo4.jpg',
+    img: './Images/Photo4.webp',
     email:'patrikov@forstudy.space',
     text1: `
       <p>Evgeny Patrikov is a seasoned maritime lawyer with over 20 years of experience in the field.
@@ -48,7 +48,7 @@ const teamData = {
   3: {
     name: 'Vladislav Melnik',
     position: 'Associate',
-    img: './Images/Photo6.jpg',
+    img: './Images/Photo6.webp',
     email:'melnik@forstudy.space',
     text1: `
       <p>Vladislav Melnik is an Associate at HLEGAL Law Company, specializing in maritime and commercial
@@ -74,7 +74,7 @@ const teamData = {
   4: {
     name: 'Sergey Binn',
     position: 'Associate',
-    img: './Images/Photo1.jpg',
+    img: './Images/Photo1.webp',
     email:'binn@forstudy.space',
      text1: `
       <p>Sergey Binn is an Associate at HLEGAL, specializing in maritime law. He holds a degree in Law
@@ -97,7 +97,7 @@ const teamData = {
   5: {
     name: 'Oksana Kobzar',
     position: 'Equity partner, Attorney-at-law',
-    img: './Images/Photo3.jpg',
+    img: './Images/Photo3.webp',
     email:'kobzar@forstudy.space',
      text1: `
       <p> Oksana heads the practice of international trade and shipping. He specializes in resolving
@@ -119,7 +119,7 @@ const teamData = {
   6: {
     name: 'Julia Wolk',
     position: 'Associate, Attorney-at-law',
-    img: './Images/Photo5.jpg',
+    img: './Images/Photo5.webp',
     email:'wolk@forstudy.space',
     text1: `
       <p> Julia Wolk is an Associate and Attorney-at-law at HLEGAL Law Company, specializing in maritime
