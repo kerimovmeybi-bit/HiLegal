@@ -1,6 +1,6 @@
 const publications = {
 1:{
-    img: `./Images/Publication-1.png`,
+    img: `./Images/Publication-1.webp`,
     title: `Equity associate`,
     time: `April 22`,
     text1: `An equity associate is a financial professional who supports senior team members in analyzing companies and making investment recommendations. 
@@ -16,7 +16,7 @@ const publications = {
     ],
     text3: `A private equity associates helps clients evaluate and acquire new businesses that are for sale and in line with the client's investment goals. 
             They can also collaborate with investment banks to find potential investors, source new business deals, and conduct market research.`,
-    img2: `/Images/Publication-6.jpeg`,
+    img2: `/Images/Publication-6.webp`,
     text4: `This equity research associate job description outlines the main roles, responsibilities, 
             skills, and education required to be a successful equity research associate.`,
     text5: ` Oftentimes, direction is provided by senior team members, but the research associate must do the brunt of the valuation and sensitivity analysis work on their own. 
@@ -30,7 +30,7 @@ const publications = {
   },
   
 2:{
-    img: `./Images/Publication-2.png`,
+    img: `./Images/Publication-2.webp`,
     title: `Penalty for the Good Corporation`,
     time: `September 29`,
     text1: ` On January 21, the French National Data Protection Commission (CNIL) announced on its website
@@ -80,7 +80,7 @@ const publications = {
   },
 
 3:{
-    img: `./Images/Publication-3.png`,
+    img: `./Images/Publication-3.webp`,
     title: `Millennial Testament`,
     time: `August 19`,
     text1: `Millennialism (from Latin mille 'thousand' annus 'year' and -ism) or chiliasm (from the Greek equivalent) is a belief which is held by some religious denominations.
@@ -109,7 +109,7 @@ const publications = {
   },
 
 4:{
-    img: `./Images/Publication-4.png`,
+    img: `./Images/Publication-4.webp`,
     title: `Language Law: How to Make Your Website Relevant`,
     time: `August 19`,
     text1: `To make your website language relevant and compliant with "language law," 
@@ -145,7 +145,7 @@ const publications = {
   },
 
 5:{
-    img: `./Images/Publication-5.png`,
+    img: `./Images/Publication-5.webp`,
     title: `Reimbursement of the child's tuition fees in kindergarten and school`,
     time: `February 5, 2018`,
     text1: `In 2026, reimbursement or tax relief for kindergarten and school tuition varies significantly by country and specific state/local programs.
@@ -253,21 +253,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const pages = [
             [
                 `<article class="publication-item">
-                <img src="./Images/Publication-1.png" class="publication-item__image">
+                <img src="./Images/Publication-1.webp" class="publication-item__image">
                 <a href="./publications-page.html" class="publication-item__title">Equity associate</a>
                 <p class="publication-item__date">April 22</p>
                 <div class="h-line-card"></div>
                 <p class="publication-item__description">I'm a jun on projects...</p>
             </article>`,
                 `<article class="publication-item">
-                <img src="./Images/Publication-4.png" class="publication-item__image">
+                <img src="./Images/Publication-4.webp" class="publication-item__image">
                 <a href="./publications-page.html" class="publication-item__title">Language Law: How to Make Your Website Relevant</a>
                 <p class="publication-item__date">August 19</p>
                 <div class="h-line-card"></div>
                 <p class="publication-item__description">Natalia Kyryk, head of content studio Wordfactory.ua...</p>
             </article>`,
                 `<article class="publication-item">
-                <img src="./Images/Publication-3.png" class="publication-item__image">
+                <img src="./Images/Publication-3.webp" class="publication-item__image">
                 <a href="./publications-page.html" class="publication-item__title">Millennial Testament</a>
                 <p class="publication-item__date">August 19</p>
                 <div class="h-line-card"></div>
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             [
                 `<article class="publication-item">
-                <img src="./Images/Publication-2.png" class="publication-item__image">
+                <img src="./Images/Publication-2.webp" class="publication-item__image">
                 <a href="./publications-entry-page.html?id=2" class="publication-item__title">
                     Penalty for the Good Corporation...
                 </a>
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p class="publication-item__description">And why the recovery of 50 million euros...</p>
             </article>`,
                 `<article class="publication-item">
-                <img src="./Images/Publication-5.png" class="publication-item__image">
+                <img src="./Images/Publication-5.webp" class="publication-item__image">
                 <a href="./publications-entry-page.html?id=5" class="publication-item__title">
                     Reimbursement of the child's tuition fees...
                 </a>
