@@ -327,6 +327,15 @@ main {
   }
 }
 
+@media (max-width: 1024px) {
+  .team__title {
+    font-size: 32px;
+    padding-bottom: 50px;
+    margin: 0 auto;
+  }
+}
+
+
 @media (max-width: 768px) {
   .team {
     padding: 50px 20px;
@@ -334,8 +343,8 @@ main {
 
   .team__title {
     font-size: 28px;
-    margin-bottom: 50px;
-    text-align: left;
+    padding-bottom: 50px;
+    margin: 0 auto;
   }
 
   .team__info {
@@ -468,9 +477,9 @@ main {
   text-align: right;
 }
 
-/* --------------------------- */
-/* 📱 Адаптивность (до 768px) */
-/* --------------------------- */
+
+/*  Адаптивность (до 768px) */
+
 /* ===== BURGER ===== */
 .burger-btn {
   display: none;
@@ -553,25 +562,21 @@ main {
 @media (max-width: 430px) {
   .team__container {
     padding: 0 15px;
-    /* уменьшаем боковые отступы */
   }
 
   .team__grid {
     gap: 12px;
-    /* уменьшаем расстояние между карточками */
   }
 
   .team__title {
     font-size: 20px;
-    margin: 0 0 40px 0;
-    /* уменьшаем отступы вокруг заголовка */
+    margin: 0 auto;
+    padding-bottom: 50px;
   }
 
   .team__info {
     padding: 12px 4px 20px 4px;
-    /* уменьшаем паддинги внутри карточки */
     flex-direction: column;
-    /* имя и должность сверху, стрелка снизу */
     align-items: flex-start;
   }
 
@@ -585,24 +590,18 @@ main {
 @media (max-width: 768px) {
   .team__info {
     flex-direction: row;
-    /* горизонтальный флекс */
     justify-content: space-between;
-    /* имя/должность слева, стрелка справа */
     align-items: center;
-    /* выравнивание по центру вертикально */
     width: 100%;
     padding: 15px 5px 36px 5px;
-    /* сохрани текущие паддинги */
   }
 
   .team__text {
     flex: 1;
-    /* текст занимает доступное место слева */
   }
 
   .team__arrow {
     margin-top: 0;
-    /* убираем верхний отступ */
   }
 }
 
@@ -627,26 +626,20 @@ main {
 @media (max-width: 768px) {
   .footer__bottom {
     flex-direction: column;
-    /* вертикальный порядок */
     align-items: center;
-    /* центрируем по горизонтали */
     text-align: center;
     gap: 15px;
-    /* расстояние между элементами */
     padding: 30px 20px;
-    /* уменьшаем паддинги */
   }
 
   .footer__address-block {
     flex-direction: column;
-    /* адрес и ссылка вертикально */
     align-items: center;
     gap: 5px;
   }
 
   .footer__contacts {
     flex-direction: column;
-    /* лого и контакты вертикально */
     align-items: center;
     gap: 10px;
   }
