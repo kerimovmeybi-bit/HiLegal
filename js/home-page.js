@@ -58,149 +58,143 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Скрипт для секции "Команда"
-const teamData = [
-    {
-        img: './Images/Photo2.webp',
-        text: 'We have heard, brothers, that we are confident and will always be honest and help you.',
-        name: 'Alexander Alexandrovsky',
-        position: 'Managing Partner'
-    },
-    {
-        img: './Images/Photo1.webp',
-        text: 'Our team combines deep legal expertise with modern business thinking. We are not just lawyers, but also strategic partners for our clients.',
-        name: 'Sergey Binn',
-        position: 'Associate'
-    },
-    {
-        img: './Images/Photo3.webp',
-        text: 'We support clients in the most complex and non-standard legal cases. Our experience allows us to find effective solutions even in the most difficult situations.',
-        name: 'Oksana Kobzar',
-        position: 'Equity partner, Attorney-at-law'
-    }
-];
+document.addEventListener('DOMContentLoaded', () => {
 
-const card = document.getElementById('teamCard');
-let current = 0;
+  /* ===================== TEAM ===================== */
 
-function renderCard(index) {
-    card.innerHTML = `
-        <div class="team-card__inner">
-            <img class="team-photo" src="${teamData[index].img}" alt="">
-            <div class="team-content">
-                <a href="./team.html" class="team-title">Team ›</a>
-                <p class="team-text">${teamData[index].text}</p>
-                <p class="team-name">${teamData[index].name}</p>
-                <p class="team-position">${teamData[index].position}</p>
-            </div>
+  const teamData = [
+    { img: './Images/Photo2.webp', key: 'team.cards.0' },
+    { img: './Images/Photo1.webp', key: 'team.cards.1' },
+    { img: './Images/Photo3.webp', key: 'team.cards.2' }
+  ];
+
+  const teamCard = document.getElementById('teamCard');
+  let currentTeam = 0;
+
+  if (teamCard) {
+    teamCard.innerHTML = `
+      <div class="team-card__inner show">
+        <img class="team-photo" />
+        <div class="team-content">
+          <a href="./team.html" class="team-title" data-i18n="team.title"></a>
+          <p class="team-text"></p>
+          <p class="team-name"></p>
+          <p class="team-position"></p>
         </div>
-
-        <div class="team-dots">
-            ${teamData.map((_, i) =>
-                `<button class="team-dot ${i === index ? 'active' : ''}" data-index="${i}"></button>`
-            ).join('')}
-        </div>
+      </div>
+      <div class="team-dots"></div>
     `;
 
-    const inner = card.querySelector('.team-card__inner');
-    requestAnimationFrame(() => inner.classList.add('show'));
+    const teamPhoto = teamCard.querySelector('.team-photo');
+    const teamText = teamCard.querySelector('.team-text');
+    const teamName = teamCard.querySelector('.team-name');
+    const teamPosition = teamCard.querySelector('.team-position');
+    const teamDots = teamCard.querySelector('.team-dots');
 
-    card.querySelectorAll('.team-dot').forEach(dot => {
-        dot.addEventListener('click', () => {
-            if (+dot.dataset.index === current) return;
-            switchCard(+dot.dataset.index);
-        });
-    });
-}
-
-function switchCard(index) {
-    const inner = card.querySelector('.team-card__inner');
-    inner.classList.remove('show');
-
-    setTimeout(() => {
-        current = index;
-        renderCard(current);
-    }, 300);
-}
-
-renderCard(current);
-
-
-/* Publication articles slider*/
-
-
-document.addEventListener('DOMContentLoaded', () => {
-        const pages = [
-            [
-                `<article class="publication-item">
-                <img src="./Images/Publication-1.webp" class="publication-item__image">
-                <a href="./publications-page.html" class="publication-item__title">Equity associate</a>
-                <p class="publication-item__date">April 22</p>
-                <div class="h-line-card"></div>
-                <p class="publication-item__description">I'm a jun on projects...</p>
-            </article>`,
-                `<article class="publication-item">
-                <img src="./Images/Publication-4.webp" class="publication-item__image">
-                <a href="./publications-page.html" class="publication-item__title">Language Law: How to Make Your Website Relevant</a>
-                <p class="publication-item__date">August 19</p>
-                <div class="h-line-card"></div>
-                <p class="publication-item__description">Natalia Kyryk, head of content studio Wordfactory.ua...</p>
-            </article>`,
-                `<article class="publication-item">
-                <img src="./Images/Publication-3.webp" class="publication-item__image">
-                <a href="./publications-page.html" class="publication-item__title">Millennial Testament</a>
-                <p class="publication-item__date">August 19</p>
-                <div class="h-line-card"></div>
-                <p class="publication-item__description">What and how modern vloggers...</p>
-            </article>`
-            ],
-            [
-                `<article class="publication-item">
-                <img src="./Images/Publication-2.webp" class="publication-item__image">
-                <a href="./publications-entry-page.html?id=2" class="publication-item__title">
-                    Penalty for the Good Corporation...
-                </a>
-                <p class="publication-item__date">September 29</p>
-                <div class="h-line"></div>
-                <p class="publication-item__description">And why the recovery of 50 million euros...</p>
-            </article>`,
-                `<article class="publication-item">
-                <img src="./Images/Publication-5.webp" class="publication-item__image">
-                <a href="./publications-entry-page.html?id=5" class="publication-item__title">
-                    Reimbursement of the child's tuition fees...
-                </a>
-                <p class="publication-item__date">February 5, 2018</p>
-                <div class="h-line"></div>
-                <p class="publication-item__description">What we are talking about In June this year...</p>
-            </article>`,
-                `<article class="publication-item">
-                <a href="./publications-entry-page.html?id=6" class="publication-item__title">Currency control is dead...</a>
-                <p class="publication-item__date">June 14, 2018</p>
-                <div class="h-line"></div>
-                <p class="publication-item__description">Experts hold conferences, round tables...</p>
-            </article>`
-            ]
-        ];
-
-        let currentPage = 0;
-        const wrapper = document.getElementById('articles-wrapper');
-
-        function renderPage(pageIndex) {
-            wrapper.innerHTML = pages[pageIndex].join('');
-        }
-
-        // Показ первой страницы при загрузке
-        renderPage(currentPage);
-
-        document.querySelector('.slider-btn--next').addEventListener('click', () => {
-            currentPage = (currentPage + 1) % pages.length;
-            renderPage(currentPage);
-        });
-
-        document.querySelector('.slider-btn--prev').addEventListener('click', () => {
-            currentPage = (currentPage - 1 + pages.length) % pages.length;
-            renderPage(currentPage);
-        });
+    teamData.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'team-dot';
+      dot.addEventListener('click', () => switchTeamCard(i));
+      teamDots.appendChild(dot);
     });
 
+    function renderTeamCard(index) {
+      const data = teamData[index];
 
+      teamPhoto.src = data.img;
+      teamText.textContent = i18next.t(`${data.key}.text`);
+      teamName.textContent = i18next.t(`${data.key}.name`);
+      teamPosition.textContent = i18next.t(`${data.key}.position`);
+
+      teamDots.querySelectorAll('.team-dot').forEach((d, i) =>
+        d.classList.toggle('active', i === index)
+      );
+    }
+
+    function switchTeamCard(index) {
+      if (index === currentTeam) return;
+      currentTeam = index;
+      renderTeamCard(currentTeam);
+    }
+
+    i18next.on('languageChanged', () => renderTeamCard(currentTeam));
+
+    renderTeamCard(currentTeam);
+  }
+  /* ===================== PUBLICATIONS ===================== */
+
+const publicationPages = [
+  [
+    { img: './Images/Publication-1.webp', key: 'publications.items.1' },
+    { img: './Images/Publication-4.webp', key: 'publications.items.2' },
+    { img: './Images/Publication-3.webp', key: 'publications.items.3' }
+  ],
+  [
+    { img: './Images/Publication-2.webp', key: 'publications.items.4' },
+    { img: './Images/Publication-5.webp', key: 'publications.items.5' },
+    { img: './Images/Publication-6.webp', key: 'publications.items.6' }
+  ]
+];
+
+let currentPublicationPage = 0;
+const articlesWrapper = document.getElementById('articles-wrapper');
+const nextBtn = document.querySelector('.slider-btn--next');
+const prevBtn = document.querySelector('.slider-btn--prev');
+
+function renderPublicationPage(index) {
+  if (!articlesWrapper) return;
+
+  articlesWrapper.innerHTML = '';
+
+  publicationPages[index].forEach(item => {
+    const article = document.createElement('article');
+    article.className = 'publication-item';
+
+    const img = document.createElement('img');
+    img.src = item.img;
+    img.className = 'publication-item__image';
+
+    const title = document.createElement('a');
+    title.className = 'publication-item__title';
+    title.href = './publications-page.html';
+    title.textContent = i18next.t(`${item.key}.title`);
+
+    const date = document.createElement('p');
+    date.className = 'publication-item__date';
+    date.textContent = i18next.t(`${item.key}.date`);
+
+    const line = document.createElement('div');
+    line.className = 'h-line-card';
+
+    const desc = document.createElement('p');
+    desc.className = 'publication-item__description';
+    desc.textContent = i18next.t(`${item.key}.desc`);
+
+    article.append(img, title, date, line, desc);
+    articlesWrapper.appendChild(article);
+  });
+}
+
+// первая отрисовка
+renderPublicationPage(currentPublicationPage);
+
+// кнопки
+nextBtn?.addEventListener('click', () => {
+  currentPublicationPage =
+    (currentPublicationPage + 1) % publicationPages.length;
+  renderPublicationPage(currentPublicationPage);
+});
+
+prevBtn?.addEventListener('click', () => {
+  currentPublicationPage =
+    (currentPublicationPage - 1 + publicationPages.length) %
+    publicationPages.length;
+  renderPublicationPage(currentPublicationPage);
+});
+
+//  ПЕРЕВОД ПРИ СМЕНЕ ЯЗЫКА
+i18next.on('languageChanged', () => {
+  renderPublicationPage(currentPublicationPage);
+});
+
+});
