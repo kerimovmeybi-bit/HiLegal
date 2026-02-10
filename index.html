@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiLegal</title>
+    <title data-i18n="title">HiLegal</title>
     <link rel="stylesheet" href="./css/Reset.css">
     <link rel="stylesheet" href="./css/Normalize.css">
     <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
@@ -23,15 +23,14 @@
             <div class="header__right">
                 <div class="header__top-info">
                     <div class="header__langs">
-                        <button class="header__lang-btn">UA</button>
-                        <button class="header__lang-btn">RU</button>
-                        <button class="header__lang-btn header__lang-btn--active">EN</button>
+                        <button class="header__lang-btn" data-lang="ua">UA</button>
+                        <button class="header__lang-btn" data-lang="ru">RU</button>
+                        <button class="header__lang-btn header__lang-btn--active" data-lang="en">EN</button>
                     </div>
 
                     <span class="header__top-separator"></span>
-                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" target="_blank" class="header__top-item">
-                        Kyiv, Mechnikova str,14/1
-                    </a>
+                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" target="_blank" class="header__top-item"
+                        data-i18n="header.address"></a>
                     <span class="header__top-separator"></span>
                     <a href="tel:0800211927" class="header__top-item">0800 211 927</a>
                     <span class="header__top-separator"></span>
@@ -46,140 +45,106 @@
                 </button>
                 <nav class="header__nav">
                     <ul class="header__menu">
-                        <li class="header__item"><a href="./about-us.html" class="header__link">about
-                                us</a></li>
-                        <li class="header__item"><a href="./services-page.html" class="header__link">services</a></li>
-                        <li class="header__item"><a href="./team.html" class="header__link">team</a></li>
-                        <li class="header__item"><a href="./publications-page.html"
-                                class="header__link ">publications</a>
+                        <li class="header__item"><a href="./about-us.html" class="header__link"
+                                data-i18n="menu.about"></a></li>
+                        <li class="header__item"><a href="./services-page.html" class="header__link"
+                                data-i18n="menu.services"></a></li>
+                        <li class="header__item"><a href="./team.html" class="header__link" data-i18n="menu.team"></a>
                         </li>
-                        <li class="header__item"><a href="./contact.html" class="header__link">contact</a></li>
+                        <li class="header__item"><a href="./publications-page.html" class="header__link"
+                                data-i18n="menu.publications"></a></li>
+                        <li class="header__item"><a href="./contact.html" class="header__link"
+                                data-i18n="menu.contact"></a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
+
     <main>
         <section class="home-hero">
             <div class="home-hero__container">
                 <div class="symbol-content">
                     <img src="./Images/Symbol.png" alt="Symbol" class="home-hero-symbol">
-                    <h1 class="symbol-text-title">you legal solutions provider</h1>
+                    <h1 class="symbol-text-title" data-i18n="hero.title"></h1>
                     <div class="scroll-btn">
                         <img src="./Images/Scroll.svg" alt="Scroll" class="scroll-svg">
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="hero-menu" id="heroMenu">
             <div class="hero-menu__inner">
                 <ul class="hero-menu__list">
-                    <li class="hero-menu__item hero-menu__item--active" data-key="consistent">
-                        Consistent
-                    </li>
-                    <li class="hero-menu__item" data-key="customer">
-                        Customer oriented
-                    </li>
-                    <li class="hero-menu__item" data-key="innovative">
-                        Innovative
-                    </li>
-                    <li class="hero-menu__item" data-key="business">
-                        Business oriented
-                    </li>
+                    <li class="hero-menu__item hero-menu__item--active" data-key="consistent"
+                        data-i18n="hero.menu.consistent"></li>
+                    <li class="hero-menu__item" data-key="customer" data-i18n="hero.menu.customer"></li>
+                    <li class="hero-menu__item" data-key="innovative" data-i18n="hero.menu.innovative"></li>
+                    <li class="hero-menu__item" data-key="business" data-i18n="hero.menu.business"></li>
                 </ul>
                 <div class="hero-menu__divider"></div>
                 <div class="hero-menu__content">
-                    <h3 class="hero-menu__title" id="menuTitle">
-                        We turn the idea of legal services
-                    </h3>
-                    <p class="hero-menu__text" id="menuText">
-                        Consolidating many years of experience and practice, the company's
-                        lawyers accompany complex projects and achieve a number of
-                        important decisions for the industry.
-                    </p>
+                    <h3 class="hero-menu__title" id="menuTitle" data-i18n="hero.menu.title"></h3>
+                    <p class="hero-menu__text" id="menuText" data-i18n="hero.menu.text"></p>
                 </div>
             </div>
         </section>
+
+
+
         <section class="home-services">
             <div class="services">
-                <a href="./services-page.html" class="services-text">Services ›</a>
-                <h2 class="services-title">What can we do better than others?</h2>
+                <a href="./services-page.html" class="services-text" data-i18n="services.link"></a>
+                <h2 class="services-title" data-i18n="services.title"></h2>
                 <div class="services-items">
                     <article class="services-card">
                         <div class="services-image">
                             <img src="./Images/Ecommerce.svg" loading="lazy" alt="icon">
                         </div>
-                        <a href="./services-entry-page.html?id=1" class="card-title">IT and e-commerce.</a>
-                        <p class="card-text">
-                            An endless stream of contracts, tax issues, labor relations, corporate papers - legal work
-                            distracts you from doing business. But there is not much work to do to hire an in-house
-                            lawyer.An endless stream of contracts, tax issues, labor relations, corporate papers -
-                            legal work distracts you from doing business. But there is not much work to do to hire an
-                            in-house lawyer.
-                        </p>
+                        <a href="./services-entry-page.html?id=1" class="card-title"
+                            data-i18n="services.items.1.title"></a>
+                        <p class="card-text" data-i18n="services.items.1.desc"></p>
                     </article>
                     <article class="services-card">
                         <div class="services-image">
                             <img src="./Images/Support.svg" loading="lazy" alt="icon">
                         </div>
-                        <a href="./services-entry-page.html?id=2" class="card-title">Comprehensive daily <br> legal
-                            support.</a>
-                        <p class="card-text">
-                            In addition, over time, the work will become the same type and uninteresting for a full-time
-                            lawyer. And we know very well how difficult it is to find a good candidate with experience
-                            in
-                            the field of information technology in Ukraine.
-                        </p>
+                        <a href="./services-entry-page.html?id=2" class="card-title"
+                            data-i18n="services.items.2.title"></a>
+                        <p class="card-text" data-i18n="services.items.2.desc"></p>
                     </article>
                     <article class="services-card">
                         <div class="services-image">
                             <img src="./Images/Coprorate.svg" loading="lazy" alt="icon">
                         </div>
-                        <a href="./services-entry-page.html?id=3" class="card-title">Structuring corporate
-                            relationships.</a>
-                        <p class="card-text">
-                            Instead of just providing legal services, we will hire a lawyer or a whole team that will
-                            fit
-                            into the daily life of your company.
-                        </p>
+                        <a href="./services-entry-page.html?id=3" class="card-title"
+                            data-i18n="services.items.3.title"></a>
+                        <p class="card-text" data-i18n="services.items.3.desc"></p>
                     </article>
                     <article class="services-card">
                         <div class="services-image">
                             <img src="./Images/Trust.svg" loading="lazy" alt="icon">
                         </div>
-                        <a href="./services-entry-page.html?id=4" class="card-title">Building contractual relations.</a>
-                        <p class="card-text">
-                            Once a week, or week after month, you have your own lawyer by your side. Anyone in the
-                            company
-                            can catch it at the coffee maker and just talk about current affairs instead of waiting for
-                            update status.
-                        </p>
+                        <a href="./services-entry-page.html?id=4" class="card-title"
+                            data-i18n="services.items.4.title"></a>
+                        <p class="card-text" data-i18n="services.items.4.desc"></p>
                     </article>
                     <article class="services-card">
                         <div class="services-image">
                             <img src="./Images/Protection.svg" loading="lazy" alt="icon">
                         </div>
-                        <a href="./services-entry-page.html?id=5" class="card-title">Protection of
-                            business,<br>intellectual
-                            property.</a>
-                        <p class="card-text">
-                            And all the other time he will work on new diverse projects, so he will definitely not stop
-                            in
-                            professional development. One way or another, all Axon Partners will work for you instead of
-                            a
-                            corporate lawyer.
-                        </p>
+                        <a href="./services-entry-page.html?id=5" class="card-title"
+                            data-i18n="services.items.5.title"></a>
+                        <p class="card-text" data-i18n="services.items.5.desc"></p>
                     </article>
                     <article class="services-card">
                         <div class="services-image">
                             <img src="./Images/Court.svg" loading="lazy" alt="icon">
                         </div>
-                        <a href="./services-entry-page.html?id=6" class="card-title">Judicial representation.</a>
-                        <p class="card-text">
-                            Is it a small, medium-sized company or a market leader? Local business or multinational
-                            company?
-                            Do you have your own legal department or not?
-                        </p>
+                        <a href="./services-entry-page.html?id=6" class="card-title"
+                            data-i18n="services.items.6.title"></a>
+                        <p class="card-text" data-i18n="services.items.6.desc"></p>
                     </article>
                 </div>
             </div>
@@ -187,9 +152,7 @@
         <section class="team-card" id="teamCard"></section>
     </main>
     <footer class="footer">
-        <p class="footer-title">
-            They already trust us
-        </p>
+        <p class="footer-title" data-i18n="footer.trust"></p>
         <div class="footer-companies">
             <a href="#" target="_blank">
                 <article class="company-1">
@@ -254,11 +217,9 @@
         </div>
         <section class="publication-entry--1">
             <div class="publication-title-end">
-                <a href="./publications-page.html" class="publication-media--1">
-                    Publications <img src="./Images/Vector-2.svg" alt="vecrot" class="icon-media"></a>
-                <h2 class="publication-title--1">
-                    Recommended
-                </h2>
+                <a href="./publications-page.html" class="publication-media--1" data-i18n="publications.link">
+                    <img src="./Images/Vector-2.svg" alt="vecrot" class="icon-media"></a>
+                <h2 class="publication-title--1" data-i18n="publications.title"></h2>
             </div>
             <div class="publication-content--1">
                 <div class="publications-slider-wrapper">
@@ -266,39 +227,27 @@
                     <div id="articles-wrapper">
                         <article class="publication-item">
                             <img src="./Images/Publication-1.png" alt="Publication 1" class="publication-item__image">
-                            <a href="./publications-page.html" class="publication-item__title">
-                                Equity associate
-                            </a>
-                            <p class="publication-item__date">April 22</p>
+                            <a href="./publications-page.html" class="publication-item__title"
+                                data-i18n="publications.items.1.title"></a>
+                            <p class="publication-item__date" data-i18n="publications.items.1.date"></p>
                             <div class="h-line-card"></div>
-                            <p class="publication-item__description">
-                                I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering
-                                my
-                                parents told me that if I…</p>
+                            <p class="publication-item__description" data-i18n="publications.items.1.desc"></p>
                         </article>
                         <article class="publication-item">
                             <img src="./Images/Publication-4.png" alt="Publication 1" class="publication-item__image">
-                            <a href="./publications-page.html" class="publication-item__title">
-                                Language Law: How to Make Your Website Relevant
-                            </a>
-                            <p class="publication-item__date">August 19</p>
+                            <a href="./publications-page.html" class="publication-item__title"
+                                data-i18n="publications.items.2.title"></a>
+                            <p class="publication-item__date" data-i18n="publications.items.2.date"></p>
                             <div class="h-line-card"></div>
-                            <p class="publication-item__description">
-                                Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is the
-                                number
-                                one argument in favor of the Ukrainian-language site. Secondly, it is effective. IN…</p>
+                            <p class="publication-item__description" data-i18n="publications.items.2.desc"></p>
                         </article>
                         <article class="publication-item">
                             <img src="./Images/Publication-3.png" alt="Publication 1" class="publication-item__image">
-                            <a href="./publications-page.html" class="publication-item__title">
-                                Millennial Testament
-                            </a>
-                            <p class="publication-item__date">August 19</p>
+                            <a href="./publications-page.html" class="publication-item__title"
+                                data-i18n="publications.items.3.title"></a>
+                            <p class="publication-item__date" data-i18n="publications.items.3.date"></p>
                             <div class="h-line-card"></div>
-                            <p class="publication-item__description">
-                                What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A
-                                typical
-                                legacy of the Ukrainian generation X looks like this: an apartment in…</p>
+                            <p class="publication-item__description" data-i18n="publications.items.3.desc"></p>
                         </article>
                     </div>
                     <button class="slider-btn slider-btn--next">›</button>
@@ -308,9 +257,9 @@
         <div class="footer__bottom">
             <div class="footer__left">
                 <div class="footer__address-block">
-                    <p class="footer__address">Kyiv, Mechnikova str, 14/1</p>
+                    <p class="footer__address" data-i18n="footer.address"></p>
                     <span class="header__top-separator"></span>
-                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" class="footer__map">On map</a>
+                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" class="footer__map" data-i18n="footer.map"></a>
                 </div>
                 <div class="footer__contacts">
                     <a href="#" class="footer__social"><img src="./Images/LogoFB.png" alt="Facebook"></a>
@@ -320,14 +269,15 @@
                     <a href="mailto:contact@hlegal.com" class="footer__email">contact@hlegal.com</a>
                 </div>
             </div>
-
             <p class="footer__copyright">© 2026 HLEGAL Law company, LLC</p>
         </div>
-
     </footer>
+
     <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/i18next@22.4.9/i18next.min.js"></script>
+    <script src="./js/i18n-index.js"></script>
     <script src="./js/scripts.js"></script>
-    <script src="./js/home-page.js"></script>
+    <!-- <script src="./js/home-page.js"></script> -->
 </body>
 
 </html>

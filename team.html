@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HiLegal</title>
+    <title data-i18n="title">HiLegal</title>
     <link rel="stylesheet" href="./css/Reset.css">
     <link rel="stylesheet" href="./css/Normalize.css">
     <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/team.css">
-
 </head>
 
 <body>
@@ -21,21 +20,20 @@
                     <img src="./Images/Logo.svg" alt="Hlegal Logo" class="header__logo-img">
                 </a>
                 <img src="./Images/Slash.svg" alt="Slash" class="header__slash">
-                <span class="header__current-menu">team</span>
+                <span class="header__current-menu" data-i18n="menu.team"></span>
             </div>
 
             <div class="header__right">
                 <div class="header__top-info">
                     <div class="header__langs">
-                        <button class="header__lang-btn">UA</button>
-                        <button class="header__lang-btn">RU</button>
-                        <button class="header__lang-btn header__lang-btn--active">EN</button>
+                        <button class="header__lang-btn" data-lang="ua">UA</button>
+                        <button class="header__lang-btn" data-lang="ru">RU</button>
+                        <button class="header__lang-btn header__lang-btn--active" data-lang="en">EN</button>
                     </div>
 
                     <span class="header__top-separator"></span>
-                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" target="_blank" class="header__top-item">
-                        Kyiv, Mechnikova str,14/1
-                    </a>
+                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" target="_blank" class="header__top-item"
+                        data-i18n="header.address"></a>
                     <span class="header__top-separator"></span>
                     <a href="tel:0800211927" class="header__top-item">0800 211 927</a>
                     <span class="header__top-separator"></span>
@@ -48,17 +46,18 @@
                     <span></span>
                     <span></span>
                 </div>
-
                 <nav class="header__nav">
                     <ul class="header__menu">
-                        <li class="header__item"><a href="./index.html" class="header__link">about
-                                us</a></li>
-                        <li class="header__item"><a href="./services-page.html" class="header__link">services</a></li>
-                        <li class="header__item"><a href="./team.html"
-                                class="header__link header__link--active">team</a></li>
-                        <li class="header__item"><a href="./publications-page.html"
-                                class="header__link">publications</a></li>
-                        <li class="header__item"><a href="./contact.html" class="header__link">contact</a></li>
+                        <li class="header__item"><a href="./about-us.html" class="header__link"
+                                data-i18n="menu.about"></a></li>
+                        <li class="header__item"><a href="./services-page.html" class="header__link"
+                                data-i18n="menu.services"></a></li>
+                        <li class="header__item"><a href="./team.html" class="header__link header__link--active"
+                                data-i18n="menu.team">Team</a></li>
+                        <li class="header__item"><a href="./publications-page.html" class="header__link"
+                                data-i18n="menu.publications"></a></li>
+                        <li class="header__item"><a href="./contact.html" class="header__link"
+                                data-i18n="menu.contact"></a></li>
                     </ul>
                 </nav>
             </div>
@@ -68,18 +67,14 @@
     <main>
         <section class="team">
             <div class="team__container">
-                <h1 class="team__title">
-                    We are used to taking responsibility and always guarantee honest, timely assistance, even in
-                    situations where most are powerless.
-                </h1>
-
+                <h1 class="team__title" data-i18n="team.title"></h1>
                 <div class="team__grid">
                     <div class="team__card">
                         <img src="./Images/Photo2.webp" loading="lazy" alt="Team Member" class="team__photo" />
                         <div class="team__info">
                             <div class="team__text">
-                                <p class="team__name">Alexander Alexandrovsky</p>
-                                <p class="team__role">Managing partner</p>
+                                <p class="team__name" data-i18n="team.members.1.name"></p>
+                                <p class="team__role" data-i18n="team.members.1.role"></p>
                             </div>
                             <a href="./team-entry-page.html?id=1" class="team__arrow"></a>
                         </div>
@@ -88,8 +83,8 @@
                         <img src="./Images/Photo4.webp" loading="lazy" alt="Team Member" class="team__photo" />
                         <div class="team__info">
                             <div class="team__text">
-                                <p class="team__name">Evgeny Patrikov</p>
-                                <p class="team__role">Equity partner, Attorney-at-law</p>
+                                <p class="team__name" data-i18n="team.members.2.name"></p>
+                                <p class="team__role" data-i18n="team.members.2.role"></p>
                             </div>
                             <a href="./team-entry-page.html?id=2" class="team__arrow"></a>
                         </div>
@@ -99,8 +94,8 @@
                         <img src="./Images/Photo6.webp" loading="lazy" alt="Team Member" class="team__photo" />
                         <div class="team__info">
                             <div class="team__text">
-                                <p class="team__name">Vladislav Melnik</p>
-                                <p class="team__role">Associate</p>
+                                <p class="team__name" data-i18n="team.members.3.name"></p>
+                                <p class="team__role" data-i18n="team.members.3.role"></p>
                             </div>
                             <a href="./team-entry-page.html?id=3" class="team__arrow"></a>
                         </div>
@@ -110,8 +105,8 @@
                         <img src="./Images/Photo1.webp" loading="lazy" alt="Team Member" class="team__photo" />
                         <div class="team__info">
                             <div class="team__text">
-                                <p class="team__name">Sergey Binn</p>
-                                <p class="team__role">Associate</p>
+                                <p class="team__name" data-i18n="team.members.4.name"></p>
+                                <p class="team__role" data-i18n="team.members.4.role"></p>
                             </div>
                             <a href="./team-entry-page.html?id=4" class="team__arrow"></a>
                         </div>
@@ -121,8 +116,8 @@
                         <img src="./Images/Photo3.webp" loading="lazy" alt="Team Member" class="team__photo" />
                         <div class="team__info">
                             <div class="team__text">
-                                <p class="team__name">Oksana Kobzar</p>
-                                <p class="team__role">Equity partner, Attorney-at-law</p>
+                                <p class="team__name" data-i18n="team.members.5.name"></p>
+                                <p class="team__role" data-i18n="team.members.5.role"></p>
                             </div>
                             <a href="./team-entry-page.html?id=5" class="team__arrow"></a>
                         </div>
@@ -132,8 +127,8 @@
                         <img src="./Images/Photo5.webp" loading="lazy" alt="Team Member" class="team__photo" />
                         <div class="team__info">
                             <div class="team__text">
-                                <p class="team__name">Julia Wolk</p>
-                                <p class="team__role">Associate, Attorney-at-law</p>
+                                <p class="team__name" data-i18n="team.members.6.name"></p>
+                                <p class="team__role" data-i18n="team.members.6.role"></p>
                             </div>
                             <a href="./team-entry-page.html?id=6" class="team__arrow"></a>
                         </div>
@@ -148,9 +143,10 @@
         <div class="footer__bottom">
             <div class="footer__left">
                 <div class="footer__address-block">
-                    <p class="footer__address">Kyiv, Mechnikova str, 14/1</p>
+                    <p class="footer__address" data-i18n="footer.address"></p>
                     <span class="header__top-separator"></span>
-                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" target="_blank" class="footer__map">On map</a>
+                    <a href="https://maps.app.goo.gl/L47bBTYmAznCxuok6" target="_blank" class="footer__map"
+                        data-i18n="footer.map"></a>
                 </div>
                 <div class="footer__contacts">
                     <a href="https://www.facebook.com/?locale=ru_RU" class="footer__social"><img
@@ -161,13 +157,13 @@
                     <a href="mailto:contact@hlegal.com" class="footer__email">contact@hlegal.com</a>
                 </div>
             </div>
-
             <p class="footer__copyright">© 2026 HLEGAL Law company, LLC</p>
         </div>
-
     </footer>
 
     <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/i18next@22.4.9/i18next.min.js"></script>
+    <script src="./js/i18n-team.js"></script>
     <script>
         const burger = document.querySelector('.burger-btn');
         const nav = document.querySelector('.header__nav');
